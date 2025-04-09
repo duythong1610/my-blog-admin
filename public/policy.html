@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="O2O Admin" />
+
+    <title>Chính sách và quy định - O2O</title>
+  </head>
+  <body>
+    <div id="main" style="max-width: 1200px; margin: 0 auto">
+      <div
+        style="
+          width: 120px;
+          margin: 0 auto;
+          margin-bottom: 16px;
+          text-align: center;
+        "
+        class="header"
+      >
+        <img width="60" style="border-radius: 5px" src="/logo.png" />
+      </div>
+
+      <div class="content"></div>
+    </div>
+    <script>
+      const onMounted = async () => {
+        const mainEl = document.querySelector("#main");
+        const contentEl = mainEl.querySelector(".content");
+        if (mainEl) {
+          const res = await request({
+            method: "get",
+            url: "https://246admin.bmdapp.store:4246/v1/public/contentDefine/type",
+            params: {
+              type: "POLICY",
+            },
+          });
+          contentEl.innerHTML = res.data.body;
+        }
+      };
+
+      const request = ({ method, url, params }) => {
+        return new Promise((resolve, reject) => {
+          let xhr = new XMLHttpRequest();
+          if (params) {
+            const newParams = new URLSearchParams(params);
+            url += `?${newParams.toString()}`;
+          }
+          xhr.open(method, url);
+
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              if (xhr.status != 200) {
+                reject(xhr.response);
+              } else {
+                resolve(JSON.parse(xhr.response));
+              }
+            }
+          };
+          xhr.send();
+        });
+      };
+
+      window.addEventListener("load", onMounted);
+    </script>
+  </body>
+</html>

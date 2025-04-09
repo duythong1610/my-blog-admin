@@ -1,0 +1,233 @@
+.ant-form-item-label label {
+  font-weight: 500;
+}
+
+.ant-breadcrumb a {
+  color: rgba(227, 227, 227, 0.4509803922) !important;
+}
+
+.sidebar.ant-menu {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 12px;
+  font-weight: 500;
+  max-height: calc(100vh - 70px);
+}
+
+.ant-menu-item,
+.ant-menu-submenu {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-menu-item-only-child {
+  border: none;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #fdeeff !important;
+  border-radius: 8px !important;
+}
+
+.ant-menu-item:active {
+  border-radius: 8px !important;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector,
+.ant-input,
+.ant-picker,
+.ant-input-number,
+.ant-input-affix-wrapper {
+  border-radius: 8px !important;
+}
+
+.ant-breadcrumb-separator {
+  color: rgba(227, 227, 227, 0.4509803922) !important;
+}
+
+.ant-breadcrumb > span:last-child {
+  color: #fff !important;
+}
+
+.ant-btn {
+  border-radius: 8px !important;
+}
+
+.ant-layout-header {
+  background: #fff !important;
+}
+
+.ant-layout-sider {
+  background: #fff !important;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0 15px;
+  transition: all 0.3s;
+}
+
+.ant-form-item {
+  margin-bottom: 12px !important;
+}
+
+.ant-tag {
+  border-radius: 8px !important;
+}
+
+.ant-modal {
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  border-color: transparent !important;
+}
+
+.ant-upload-picture-card-wrapper {
+  text-align: center;
+}
+
+.campaign-modal .ant-picker,
+.campaign-modal .ant-input-number {
+  width: 100%;
+}
+.campaign-modal .ant-input-number-group-wrapper {
+  width: 100%;
+}
+.campaign-modal .add-product-btn {
+  margin-bottom: 10px;
+}
+
+.ant-upload-list-picture-card .ant-upload-list-item-info::before {
+  left: 0 !important;
+}
+
+.ant-upload-list-item svg {
+  font-size: 18px;
+}
+
+.ant-upload-list-item .ant-upload-list-item-name {
+  font-size: 16px;
+}
+
+.row-dragging {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  z-index: 9999;
+}
+
+.ant-descriptions-row > th,
+.ant-descriptions-row > td {
+  padding-bottom: 5px !important;
+}
+
+.ant-tag {
+  font-weight: bold;
+}
+
+.row-dragging td {
+  padding: 16px;
+}
+
+.row-dragging .drag-visible {
+  visibility: visible;
+}
+
+.drag-icon {
+  padding: 0 !important;
+}
+
+.ant-descriptions-header {
+  margin-bottom: 5px !important;
+}
+
+.image-box {
+  overflow: hidden;
+  position: relative;
+  max-height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 7px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.image-box:hover .copy-wrapper {
+  opacity: 1;
+}
+.image-box .checkbox-absolute {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 99;
+}
+.image-box .image-name {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  padding: 0 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 200%;
+  height: 30px;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+.image-box img {
+  height: 120px !important;
+  margin: auto;
+}
+.image-box .copy-wrapper {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.giftType-stats-table tbody {
+  display: none;
+}
+
+.ant-select.readOnly {
+  pointer-events: none;
+}
+
+.ant-table-thead > tr > th {
+  background: #fff2f0 !important;
+}
+
+.ant-input[disabled] {
+  color: black !important;
+}
+
+.ant-table-cell {
+  padding: 4px 8px !important;
+}
+
+.ant-input-number-handler-wrap {
+  visibility: hidden;
+}
+
+.ant-form-vertical .ant-form-item-label > label {
+  width: 100%;
+} /*# sourceMappingURL=AntDesign.css.map */

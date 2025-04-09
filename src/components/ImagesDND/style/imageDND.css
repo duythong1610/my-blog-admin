@@ -1,0 +1,11 @@
+.dragImage {
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: 10px;
+  cursor: grab;
+}/*# sourceMappingURL=imageDND.css.map */

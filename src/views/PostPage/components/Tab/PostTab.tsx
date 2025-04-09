@@ -1,7 +1,6 @@
 import { PlusOutlined, SearchOutlined } from "@ant-design/icons";
 import { Button, Input, message, Space } from "antd";
 import { postApi } from "api/post.api";
-import { InvoicePreviewModalRef } from "components/Modal/InvoicePreviewModal";
 import { usePost } from "hooks/usePost";
 import { useRef, useState } from "react";
 import { PostStatus } from "types/post";
@@ -14,7 +13,6 @@ interface PropTypes {
 const PostTab = ({ status, onFetchSummary }: PropTypes) => {
   const postModalRef = useRef<PostModalRef>();
   const [loadingDelete, setLoadingDelete] = useState(false);
-  const invoicePreviewModalRef = useRef<InvoicePreviewModalRef>();
 
   const {
     posts,

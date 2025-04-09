@@ -1,27 +1,28 @@
 /// <reference types="vite/client" />
-import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
 import react from "@vitejs/plugin-react";
-import viteTsconfigPaths from "vite-tsconfig-paths";
+import { resolve } from "path";
+import { defineConfig } from "vite";
 import svgrPlugin from "vite-plugin-svgr";
-import { esbuildCommonjs } from "@originjs/vite-plugin-commonjs";
+import { nodePolyfills } from "vite-plugin-node-polyfills";
+import requireTransform from "vite-plugin-require-transform";
+import {
+  default as tsconfigPaths,
+  default as viteTsconfigPaths,
+} from "vite-tsconfig-paths";
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), viteTsconfigPaths(), svgrPlugin(), tsconfigPaths()],
+  plugins: [
+    react(),
+    viteTsconfigPaths(),
+    svgrPlugin(),
+    tsconfigPaths(),
+    nodePolyfills(),
+    requireTransform({}),
+  ],
   server: {
     // open: true,
     port: 5175,
   },
-  // mode: "development",
-  // build: {
-  //   minify: false,
-  // },
-  build: {
-    rollupOptions: {
-      external: ["#minpath"],
-    },
-  },
-
   css: {
     preprocessorOptions: {
       less: {
@@ -34,10 +35,4 @@ export default defineConfig({
       },
     },
   },
-
-  // optimizeDeps: {
-  //   esbuildOptions: {
-  //     plugins: [esbuildCommonjs(["react-calendar", "react-date-picker"])],
-  //   },
-  // },
 });

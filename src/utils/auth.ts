@@ -2,7 +2,6 @@ import Cookies from "js-cookie";
 import md5 from "md5";
 import moment from "moment";
 import { userStore } from "store/userStore";
-import { Permission } from "types/role";
 export const getToken = () => {
   const token = Cookies.get("token");
 
@@ -11,12 +10,6 @@ export const getToken = () => {
 
 export const setToken = (token: string) => {
   return Cookies.set("token", token);
-};
-
-export const checkRole = (role: string, permissions?: Permission[]) => {
-  const find = permissions?.find((e) => e.path.includes(role));
-  if (find) return true;
-  return false;
 };
 
 export interface roleAction {
@@ -30,8 +23,7 @@ export interface roleAction {
 }
 
 export const checkRoles = <T = {}>(
-  roles: roleAction & T,
-  permissions?: Permission[]
+  roles: roleAction & T
 ): {
   create?: boolean;
   update?: boolean;
@@ -52,7 +44,6 @@ export const checkRoles = <T = {}>(
       showHide?: boolean;
     } & T
   >((prev, curr) => {
-    permissions = userStore.info.role?.permissions || [];
     //@ts-ignore
     // return {
     //   ...prev,

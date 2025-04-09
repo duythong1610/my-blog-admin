@@ -57,7 +57,7 @@ export const ProfilePage = observer(({ title }: { title: string }) => {
             >
               <Avatar
                 src={userStore.info.avatar}
-                icon={userStore.info.name?.[0]}
+                icon={userStore.info.fullName?.[0]}
                 style={{
                   color: "#f56a00",
                   verticalAlign: "middle",
@@ -71,7 +71,7 @@ export const ProfilePage = observer(({ title }: { title: string }) => {
               Thông tin khác
             </Divider>
             <p>
-              <b>Họ và tên:</b> {userStore.info.name}
+              <b>Họ và tên:</b> {userStore.info.fullName}
             </p>
             <p>
               <b>Số điện thoại:</b> {userStore.info.phone || "Chưa cập nhật"}

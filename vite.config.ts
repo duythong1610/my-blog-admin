@@ -16,6 +16,12 @@ export default defineConfig({
   // build: {
   //   minify: false,
   // },
+  build: {
+    rollupOptions: {
+      external: ["#minpath"],
+    },
+  },
+
   css: {
     preprocessorOptions: {
       less: {
